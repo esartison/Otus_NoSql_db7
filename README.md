@@ -40,7 +40,7 @@ redis-cli -h localhost -p 6379 --pass "pwd123"
 
 
 ## сохранить большой жсон (~20МБ) в виде разных структур - строка, hset, zset, list; ## 
-С помощью https://dataformatterpro.com/json-mock-generator/ создал дата сет примерно на 20Mb
+С помощью  [json-mock-generator](https://dataformatterpro.com/json-mock-generator/) создал дата сет примерно на 20Mb
 <img width="539" height="406" alt="image" src="https://github.com/user-attachments/assets/9abd30b2-4575-47c5-a4d7-966d9e3f91bf" />
 
 *LIST*
