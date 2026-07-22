@@ -45,7 +45,7 @@ redis-cli -h localhost -p 6379 --pass "pwd123"
 
 Сделал загрузку этого Json в разные типы данных.
 
-### LIST #
+#### LIST #
 питон скрипт
 ```
 import json
