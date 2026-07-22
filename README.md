@@ -91,7 +91,7 @@ OK
 ```
 
 
-# STRING #
+#### STRING #
 загрузка данных
 ```
 student:~$ time jq -c . Redis_Json.json | redis-cli -h localhost -p 6379 --pass "pwd123" -x SET my_json_string
@@ -111,7 +111,7 @@ OK
 ```
 
 
-# HSET #
+#### HSET #
 питон скрипт
 ```
 import json
@@ -144,7 +144,7 @@ user	0m2,938s
 sys   	0m0,227s
 ```
 
-# ZSET #
+#### ZSET #
 питон скрипт
 ```
 import json
@@ -186,7 +186,7 @@ sys	    0m0,109s
 ## протестировать скорость сохранения и чтения; ## 
 Запись уже тестировали в предыдущем шаге, протестируем чтение в этом шаге
 
-# LIST #
+#### LIST #
 Чтение всей коллекции
 ```
 student:~$ time redis-cli -h localhost -p 6379 --pass "pwd123" LRANGE my_json_list 0 -1
@@ -205,7 +205,7 @@ cmdstat_lrange:calls=3,usec=44180,usec_per_call=14726.67,rejected_calls=1,failed
 ```
 
 
-# STRING #
+#### STRING #
 Чтение всей коллекции
 ```
  time redis-cli -h localhost -p 6379 --pass "pwd123" --scan --pattern '*' | while read key; do echo "Key: $key"; redis-cli --pass "pwd123" GET "$key"; done
@@ -217,7 +217,7 @@ user	0m1,357s
 sys	0m0,197s
 ```
 
-# HSET #
+#### HSET #
 Чтение всей коллекции и одной записи
 ```
 -- все записи
@@ -253,7 +253,7 @@ sys	0m0,010s
 ```
 
 
-# ZSET #
+#### ZSET #
 ```
 time redis-cli -h localhost -p 6379 --pass "pwd123" ZRANGE my_zset_collection 0 -10 WITHSCORES
 156) "8343"
